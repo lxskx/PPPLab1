@@ -13,7 +13,10 @@ canvas = tk.Canvas(
 
 canvas.pack()
 
+bits = [0, 0, 0, 0, 0, 0, 0, 0]
+
 circles = []
+texts = []
 
 for i in range(8):
     x = 85 + i * 90
@@ -30,6 +33,14 @@ for i in range(8):
         width=3
     )
 
+    text = canvas.create_text(
+        x,
+        y,
+        text="0",
+        font=("Arial", 22)
+    )
+
     circles.append(circle)
+    texts.append(text)
 
 root.mainloop()
