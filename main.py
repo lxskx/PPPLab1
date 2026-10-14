@@ -13,4 +13,23 @@ canvas = tk.Canvas(
 
 canvas.pack()
 
+circles = []
+
+for i in range(8):
+    x = 85 + i * 90
+    y = 100
+    radius = 32
+
+    circle = canvas.create_oval(
+        x - radius,
+        y - radius,
+        x + radius,
+        y + radius,
+        fill="white",
+        outline="black",
+        width=3
+    )
+
+    circles.append(circle)
+
 root.mainloop()
